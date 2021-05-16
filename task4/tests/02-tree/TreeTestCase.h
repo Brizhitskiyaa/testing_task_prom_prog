@@ -9,6 +9,16 @@
 #include <boost/filesystem/path.hpp>
 
 class TreeTestCase : public ::testing::Test {
+ protected:
+  TreeTestCase();
+
+  ~TreeTestCase();
+
+  boost::filesystem::path base_path_;
 };
 
+class TreeTestCaseWithDirs : public TreeTestCase {
+ protected:
+  TreeTestCaseWithDirs();
 
+};
